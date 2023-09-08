@@ -5,6 +5,8 @@ router.get('/articles',(req, res) => {
   res.send('articles')
 });
 
-router.get('/admin/articles/new')
+router.get('/admin/articles/new', (req, res) => {
+  res.render('admin/articles/new')
+})
 
 module.exports = router;
