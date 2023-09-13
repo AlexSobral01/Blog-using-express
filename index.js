@@ -14,8 +14,14 @@ const User = require('./users/user');
 
 app.set('view engine', 'ejs');
 
+// app.use(session({
+//   secret: "qualquercoisa", cookie: { maxAge: 30000 }
+// }))
 app.use(session({
-  secret: "qualquercoisa", cookie: { maxAge: 30000 }
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: false, maxAge: 30000 }
 }))
 
 app.use(express.static('public'));
