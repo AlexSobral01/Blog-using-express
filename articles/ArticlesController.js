@@ -3,7 +3,7 @@ const router = express.Router();
 const Article = require('./Article');
 const Category = require('../categories/Category');
 const slugify = require('slugify');
-const adminAuth = require('../middlewares/adminAuth')
+const adminAuth = require('../middlewares/adminAuth');
 
 router.get('/admin/articles', adminAuth,(req, res) => {
   Article.findAll({
